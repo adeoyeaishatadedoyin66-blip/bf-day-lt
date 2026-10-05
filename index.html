@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Boyfriend Day</title>
+<style>
+body { margin:0; font-family:'Arial', sans-serif; background:#fff5f7; text-align:center; color:#5a3a3a; }
+.page { display:none; min-height:100vh; padding:40px 20px; justify-content:center; align-items:center; flex-direction:column; }
+.page.active { display:flex; }
+h1 { color:#e99aa4; font-size:3em; letter-spacing:2px; }
+.btn { background:#f8c8d0; border:none; padding:12px 30px; border-radius:30px; font-size:1.1em; cursor:pointer; margin-top:20px; }
+.envelope { font-size:100px; }
+.penguin { font-size:80px; animation: bounce 1s infinite; }
+@keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+.letter { background:#ffeef2; max-width:600px; padding:30px; border-radius:15px; text-align:left; line-height:1.6; border-top:20px solid #f8a9b8; }
+.award { background:#ffea; padding:30px; border-radius:15px; border:5px dashed #e99aa4; }
+.memories { display:flex; flex-wrap:wrap; justify-content:center; }
+.memories video { width:160px; height:220px; object-fit:cover; border-radius:15px; margin:10px; border:3px solid #f8c8d0; background:#000; }
+.hearts { color:#e99aa4; }
+</style>
+</head>
+<body>
+
+<div class="page active" id="p1">
+  <div class="envelope">💌</div>
+  <button class="btn" onclick="go('p2')">CLICK ON</button>
+</div>
+
+<div class="page" id="p2">
+  <h3>HAPPY</h3>
+  <h1>BOYFRIEND DAY</h1>
+  <div class="penguin">🐧❤️</div>
+  <div class="hearts">💕 💕 💕 💕 💕</div>
+  <button class="btn" onclick="go('p3')">click on ❤️</button>
+</div>
+
+<div class="page" id="p3">
+  <div class="letter">
+    <h2 style="text-align:center">DEAR HANDSOME</h2>
+    <p>Happy Boyfriend Day to you❤️, for real you deserve this have been doing this for you before we fought.</p>
+    <p>I know I was at fault for lying to you.I'm not writing this to change the past or to ask you to come back. </p>
+    <p>I just want you to know that I've reflected on my mistakes, I've learned from them,❤️</p>
+    <P>You meant a lot to me, and I'll always be grateful for the good memories we shared.</P>
+    <P>And I genuinely wish you nothing but happiness. </P>
+  </div>
+  <button class="btn" onclick="go('p4')">CLICK ME ❤️</button>
+</div>
+
+<div class="page" id="p4">
+  <div class="award">
+    <h2>BEST BOYFRIEND AWARD 🏅</h2>
+    <p> I appreciated the love you have for me.Thanks so much</p>
+  </div>
+  <button class="btn" onclick="go('p5')">CLICK →</button>
+</div>
+
+<div class="page" id="p5">
+  <h2>❤️❤️❤️❤️❤️</h2>
+  <div class="memories">
+    <video src="WhatsApp Video 2026-10-05 at 9.50.47 AM.mp4" controls autoplay muted loop playsinline></video>
+    <video src="WhatsApp Video 2026-10-05 at 9.50.50 AM.mp4" controls autoplay muted loop playsinline></video>
+  </div>
+  <p style="font-size:0.9em; color:#999;"></p>
+  <button class="btn" onclick="go('p6')">click on ❤️</button>
+</div>
+
+<div class="page" id="p6">
+  <h2>SONG <i style="color:#e99aa4">for you</i> 🎶</h2>
+  <audio controls>
+    <source src="https://www.123creative.com/modules/mp3player/upload/Lovely_guitars_preview.mp3" type="audio/mpeg">
+  </audio>
+  <br>
+  <button class="btn" onclick="go('p7')">click on</button>
+</div>
+
+<div class="page" id="p7">
+  <h2>THANK'S FOR EVERYTHING❤️</h2></p>
+</div>
+
+<script>
+function go(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
